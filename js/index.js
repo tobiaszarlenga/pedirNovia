@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
                         nextPage = './cartaDeAmor.html';
                         break;
                     case 'cartaDeAmor.html':
-                        nextPage = './fin.html';
+                        nextPage = './serMiNovia.html';
                         break;
                     // Agrega más casos según las páginas que tengas
                     default:

@@ -62,13 +62,39 @@
   }
   
   /* Estilos adicionales para modal */
+ /* Mensaje sobre la imagen */
+.message-overlay {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: 'Parisienne', cursive;
+  }
+  
+  /* Estilo para el modal */
   .modal-content {
-    background-color: #fff;
+    background-color: #ffe4e1; /* Color de fondo similar al de la página */
+    border: none;
     border-radius: 15px;
     text-align: center;
   }
   
   .modal-header, .modal-footer {
     border: none;
+  }
+  
+  .modal-title {
+    color: #5d3a3a;
+    font-family: 'Parisienne', cursive;
+  }
+  
+  .modal-body p {
+    color: #5d3a3a;
+    font-size: 1.1rem;
   }
   
