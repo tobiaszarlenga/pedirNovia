@@ -7,7 +7,7 @@
   body {
     background-color: #ffe4e1; /* Fondo rosa clarito */
     font-family: 'Parisienne', cursive;
-    overflow: hidden;
+    overflow: hidden; /* Deshabilita el scroll */
   }
   
   h1 {
@@ -30,6 +30,9 @@
     background-color: #ff6f61; /* Color de fondo del botón */
     color: white;
     border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
   }
   
   .btn-custom:hover {
@@ -56,5 +59,16 @@
     to {
       opacity: 0;
     }
+  }
+  
+  /* Estilos adicionales para modal */
+  .modal-content {
+    background-color: #fff;
+    border-radius: 15px;
+    text-align: center;
+  }
+  
+  .modal-header, .modal-footer {
+    border: none;
   }
   
