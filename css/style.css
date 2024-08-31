@@ -1,0 +1,49 @@
+.parisienne-regular {
+    font-family: "Parisienne", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+body {
+    background-color: #ffe4e1; /* Fondo rosa clarito */
+    font-family: 'parisagne', cursive;
+    overflow: hidden;
+  }
+  
+  h1 {
+    color: #5d3a3a; /* Un tono púrpura/marrón que combina con el fondo */
+    font-size: 1.5rem;
+  }
+  
+  img {
+    border: 5px solid #ffb6c1; /* Borde rosa */
+    border-radius: 15px;
+    transition: transform 0.3s ease; /* Transición suave en la imagen */
+    max-height: 50vh;
+  }
+  
+  img:hover {
+    transform: scale(1.05); /* Efecto zoom suave al pasar el cursor */
+  }
+  
+  .btn-custom {
+    background-color: #ff6f61; /* Color de fondo del botón */
+    color: white;
+    border: none;
+  }
+  
+  .btn-custom:hover {
+    background-color: #ff3b3b; /* Color más oscuro al pasar el cursor */
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
