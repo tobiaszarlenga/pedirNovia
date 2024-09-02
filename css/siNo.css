@@ -1,16 +1,18 @@
-.contenedor-botones {
-    text-align: center;
-    position: relative;
-   
-  }
-  
-  #SiBtn, #NoBtn {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  
+#NoBtn, #SiBtn {
+  position: absolute;
+  width: 60px; /* Tamaño fijo */
+  height: 40px;  /* Tamaño fijo */
+  padding: 6px 20px;
+  margin: 0 10px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+  transition: none; /* Desactiva cualquier transición que esté afectando el tamaño */
+}
 
+#SiBtn {
+  left: 40%;
+  transform: translateX(-50%);
+}
 
-
-
-  
+#NoBtn {
+  right: 30%; /* Posición inicial del botón No */
+}

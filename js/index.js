@@ -33,26 +33,4 @@ window.addEventListener("load", function () {
 });
 
 // CAMBIO DE LUGAR DE BOTON NO
-document.addEventListener("DOMContentLoaded", function () {
-  const noBtn = document.getElementById("NoBtn");
 
-  noBtn.addEventListener("touchstart", function (e) {
-    e.preventDefault(); // Prevenir el clic por defecto
-    const container = document.querySelector(".contenedor-botones");
-
-    // Obtener las dimensiones del contenedor y del botón
-    const containerRect = container.getBoundingClientRect();
-    const btnRect = noBtn.getBoundingClientRect();
-
-    // Calcular nuevas posiciones aleatorias dentro del contenedor
-    const maxLeft = containerRect.width - btnRect.width;
-    const maxTop = containerRect.height - btnRect.height;
-    const randomLeft = Math.random() * maxLeft;
-    const randomTop = Math.random() * maxTop;
-
-    // Mover el botón a la nueva posición
-    noBtn.style.position = "absolute";
-    noBtn.style.left = `${randomLeft}px`;
-    noBtn.style.top = `${randomTop}px`;
-  });
-});
