@@ -42,6 +42,7 @@
     background-color: #ff3b3b; /* Color más oscuro al pasar el cursor */
   }
   
+  
   .fade-in {
     opacity: 0;
     animation: fadeIn 1.5s ease forwards;

@@ -1,0 +1,17 @@
+.contenedor-botones {
+    text-align: center;
+    position: relative;
+    width: 100%; /* Ajusta según sea necesario */
+    height: 100%; /* Ajusta según sea necesario */
+  }
+  
+  #SiBtn, #NoBtn {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+
+
+
+
+  
