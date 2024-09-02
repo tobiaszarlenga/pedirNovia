@@ -1,12 +1,15 @@
-.parisienne-regular {
-    font-family: "Parisienne", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
+
+
+.dancing-script-fuenteDeAmor {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
   
   body {
     background-color: #ffe4e1; /* Fondo rosa clarito */
-    font-family: 'Parisienne', cursive;
+    font-family: 'Dancing Script', cursive;
     overflow: hidden; /* Deshabilita el scroll */
   }
   
@@ -73,7 +76,7 @@
     padding: 10px 20px;
     border-radius: 10px;
     font-size: 1.2rem;
-    font-family: 'Parisienne', cursive;
+    font-family: 'Dancing Script', cursive;
   }
   
   /* Estilo para el modal */
@@ -90,7 +93,7 @@
   
   .modal-title {
     color: #5d3a3a;
-    font-family: 'Parisienne', cursive;
+    font-family: 'Dancing Script', cursive;
   }
   
   .modal-body p {
