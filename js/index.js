@@ -1,4 +1,7 @@
 window.addEventListener("load", function () {
+  // Aplica la clase 'fade-in' cuando la página carga
+  document.body.classList.add("fade-in");
+
   const button = document.getElementById("continuarBtn");
 
   if (button) {
@@ -32,23 +35,36 @@ window.addEventListener("load", function () {
   }
 });
 
-// CAMBIO DE LUGAR DE BOTON NO
+// CAMBIO DE LUGAR DE BOTON NO Y REDIRECCION BOTON SI 
+document.addEventListener("DOMContentLoaded", () => {
+  const siBtn = document.getElementById("SiBtn");
 
-document.addEventListener('DOMContentLoaded', () => {
-  const noBtn = document.getElementById('NoBtn');
-  const contenedor = document.querySelector('.contenedor-botones');
+  if (siBtn) {
+    siBtn.addEventListener("click", (event) => {
+      event.preventDefault(); // Evita el comportamiento predeterminado del enlace
 
-  noBtn.addEventListener('touchstart', () => {
+      // Añade la clase 'fade-out' para iniciar la animación
+      document.body.classList.add("fade-out");
+
+      // Espera a que termine la animación antes de redirigir
+      setTimeout(() => {
+        window.location.href = "./fin.html";
+      }, 1500); // Tiempo que coincide con la duración de la animación en el CSS
+    });
+  }
+
+  // Código existente para el botón "No"
+  const noBtn = document.getElementById("NoBtn");
+  if (noBtn) {
+    noBtn.addEventListener("touchstart", () => {
       const maxX = window.innerWidth - noBtn.offsetWidth;
       const maxY = window.innerHeight - noBtn.offsetHeight;
 
-      // Generar posiciones aleatorias dentro de los límites
       const randomX = Math.floor(Math.random() * maxX);
       const randomY = Math.floor(Math.random() * maxY);
 
-      // Asignar las posiciones al botón "No"
       noBtn.style.left = `${randomX}px`;
       noBtn.style.top = `${randomY}px`;
-  });
+    });
+  }
 });
-
