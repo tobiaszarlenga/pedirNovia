@@ -34,3 +34,21 @@ window.addEventListener("load", function () {
 
 // CAMBIO DE LUGAR DE BOTON NO
 
+document.addEventListener('DOMContentLoaded', () => {
+  const noBtn = document.getElementById('NoBtn');
+  const contenedor = document.querySelector('.contenedor-botones');
+
+  noBtn.addEventListener('touchstart', () => {
+      const maxX = window.innerWidth - noBtn.offsetWidth;
+      const maxY = window.innerHeight - noBtn.offsetHeight;
+
+      // Generar posiciones aleatorias dentro de los límites
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
+
+      // Asignar las posiciones al botón "No"
+      noBtn.style.left = `${randomX}px`;
+      noBtn.style.top = `${randomY}px`;
+  });
+});
+

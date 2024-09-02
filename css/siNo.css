@@ -1,18 +1,23 @@
 #NoBtn, #SiBtn {
-  position: absolute;
-  width: 60px; /* Tamaño fijo */
-  height: 40px;  /* Tamaño fijo */
+  position: absolute; /* Esto es necesario para que las posiciones 'left' y 'top' funcionen */
+  width: 60px;
+  height: 40px;
   padding: 6px 20px;
   margin: 0 10px;
-  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
-  transition: none; /* Desactiva cualquier transición que esté afectando el tamaño */
+  box-sizing: border-box;
+  transition: none; /* Desactiva cualquier transición que esté afectando el tamaño o la posición */
 }
 
 #SiBtn {
-  left: 40%;
+  left: 18vh;
+    /* Se utilizan percentajes para que la posición sea relativa al viewport */
   transform: translateX(-50%);
 }
 
 #NoBtn {
-  right: 30%; /* Posición inicial del botón No */
+  /* Se eliminan las posiciones iniciales para dejar que el JavaScript maneje esto */
+  right: 14vh;
+  
+  
+  transition: all 0.3s ease;
 }
