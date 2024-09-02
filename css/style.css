@@ -97,8 +97,17 @@
     font-family: 'Dancing Script', cursive;
   }
   
-  .modal-body p {
+  .modal-body p { 
     color: #5d3a3a;
     font-size: 1.1rem;
   }
   
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Mantiene la altura proporcional de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+    transition: none; /* Desactiva cualquier transición */
+    border: 5px solid #ffb6c1; /* Asegura que el borde se mantenga consistente */
+    border-radius: 150px;
+}
+
