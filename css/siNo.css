@@ -1,16 +1,23 @@
-.contenedor-botones {
-    text-align: center;
-    position: relative;
-   
-  }
+#NoBtn, #SiBtn {
+  position: absolute; /* Esto es necesario para que las posiciones 'left' y 'top' funcionen */
+  width: 60px;
+  height: 40px;
+  padding: 6px 20px;
+  margin: 0 10px;
+  box-sizing: border-box;
+  transition: none; /* Desactiva cualquier transición que esté afectando el tamaño o la posición */
+}
+
+#SiBtn {
+  left: 18vh;
+    /* Se utilizan percentajes para que la posición sea relativa al viewport */
+  transform: translateX(-50%);
+}
+
+#NoBtn {
+  /* Se eliminan las posiciones iniciales para dejar que el JavaScript maneje esto */
+  right: 14vh;
   
-  #SiBtn, #NoBtn {
-    display: inline-block;
-    margin: 0 10px;
-  }
   
-
-
-
-
-  
+  transition: all 0.3s ease;
+}
