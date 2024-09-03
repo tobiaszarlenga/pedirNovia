@@ -35,7 +35,7 @@ window.addEventListener("load", function () {
   }
 });
 
-// CAMBIO DE LUGAR DE BOTON NO Y REDIRECCION BOTON SI 
+// CAMBIO DE LUGAR DE BOTON NO Y REDIRECCION BOTON SI
 document.addEventListener("DOMContentLoaded", () => {
   const siBtn = document.getElementById("SiBtn");
 
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Código existente para el botón "No"
+  // Código para el botón "No"
   const noBtn = document.getElementById("NoBtn");
   if (noBtn) {
     noBtn.addEventListener("touchstart", () => {
