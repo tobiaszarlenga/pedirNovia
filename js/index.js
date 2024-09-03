@@ -8,24 +8,28 @@ window.addEventListener("load", function () {
       button.classList.add("fade-out");
 
       setTimeout(function () {
-        const currentPage = window.location.pathname.split("/").pop();
+        let currentStep = localStorage.getItem("progressStep") || "step1";
         let nextPage;
 
-        switch (currentPage) {
-          case "index.html":
-            nextPage = "pages/paginaSorpresa.html"; // Ruta relativa
+        switch (currentStep) {
+          case "step1":
+            nextPage = "pages/paginaSorpresa.html";
+            localStorage.setItem("progressStep", "step2");
             break;
-          case "paginaSorpresa.html":
-            nextPage = "pages/cartaDeAmor.html"; // Ruta relativa
+          case "step2":
+            nextPage = "pages/cartaDeAmor.html";
+            localStorage.setItem("progressStep", "step3");
             break;
-          case "cartaDeAmor.html":
-            nextPage = "pages/serMiNovia.html"; // Ruta relativa
+          case "step3":
+            nextPage = "pages/serMiNovia.html";
+            localStorage.setItem("progressStep", "step4");
             break;
-          case "serMiNovia.html":
-            nextPage = "pages/fin.html"; // Ruta relativa
+          case "step4":
+            nextPage = "index.html";
+            localStorage.removeItem("progressStep"); // Reset progress for future visits
             break;
           default:
-            nextPage = "index.html"; // Ruta relativa
+            nextPage = "index.html";
             break;
         }
 
@@ -45,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.add("fade-out");
 
       setTimeout(() => {
-        window.location.href = "pages/fin.html"; // Ruta relativa
+        window.location.href = "pages/fin.html";
       }, 1500);
     });
   }
