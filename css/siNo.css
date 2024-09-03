@@ -1,32 +1,22 @@
 #NoBtn, #SiBtn {
-  position: absolute;
+  position: absolute; /* Necesario para que las posiciones 'left' y 'top' funcionen */
   width: 60px;
   height: 40px;
   padding: 6px 20px;
   margin: 0 10px;
   box-sizing: border-box;
-  transition: none;
+  transition: none; /* Desactiva cualquier transición que esté afectando el tamaño o la posición */
 }
 
 #SiBtn {
-  left: 35%;
-  top: calc(100svh - 20vh); /* Calcula la posición teniendo en cuenta el espacio ocupado por la barra de herramientas */
-  transform: translate(-50%, 0);
+  left: 35%;  /* Posiciona el botón "Sí" en el centro horizontal del contenedor */
+  top: 80%; /* Ajusta la posición vertical si es necesario */
+  transform: translate(-50%, -50%); /* Centra el botón respecto a su posición */
 }
 
 #NoBtn {
-  left: 60%;
-  top: calc(100svh - 20vh); /* Calcula la posición teniendo en cuenta el espacio ocupado por la barra de herramientas */
-  transform: translate(-50%, 0);
-  transition: all 0.3s ease;
-}
-
-/* Para evitar la superposición con otros elementos */
-.container {
-  position: relative;
-  padding-bottom: 60px; /* Asegura que haya espacio suficiente debajo del contenido principal */
-}
-
-img {
-  max-height: calc(100svh - 30vh); /* Ajusta la altura máxima de la imagen para dejar espacio suficiente para los botones */
+  left: 60%; /* Posiciona el botón "No" más a la derecha del contenedor */
+  top: 80%;  /* Ajusta la posición vertical si es necesario */
+  transform: translate(-50%, -50%); /* Centra el botón respecto a su posición inicial */
+  transition: all 0.3s ease; /* Transición suave para el movimiento */
 }
