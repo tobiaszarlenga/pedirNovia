@@ -11,12 +11,22 @@
 #SiBtn {
   left: 35%;
   top: calc(100svh - 20vh); /* Calcula la posición teniendo en cuenta el espacio ocupado por la barra de herramientas */
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
 }
 
 #NoBtn {
   left: 60%;
   top: calc(100svh - 20vh); /* Calcula la posición teniendo en cuenta el espacio ocupado por la barra de herramientas */
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   transition: all 0.3s ease;
+}
+
+/* Para evitar la superposición con otros elementos */
+.container {
+  position: relative;
+  padding-bottom: 60px; /* Asegura que haya espacio suficiente debajo del contenido principal */
+}
+
+img {
+  max-height: calc(100svh - 30vh); /* Ajusta la altura máxima de la imagen para dejar espacio suficiente para los botones */
 }
