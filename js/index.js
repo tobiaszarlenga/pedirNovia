@@ -1,6 +1,18 @@
 window.addEventListener("load", function () {
-  console.log("paguina loaded");
+  console.log("Página cargada");
   document.body.classList.add("fade-in");
+
+  // Verificar si estamos en la página fin.html
+  if (window.location.pathname.includes("fin.html")) {
+    // Si el usuario recarga la página fin.html, redirigir al inicio
+    localStorage.removeItem("progressStep");
+    setTimeout(() => {
+      window.location.href = "../index.html";
+    }, 30000); // Esperar 3 segundos antes de redirigir
+    return;
+  }
+
+  let currentStep = localStorage.getItem("progressStep") || "step1";
 
   const button = document.getElementById("continuarBtn");
 
@@ -9,7 +21,6 @@ window.addEventListener("load", function () {
       button.classList.add("fade-out");
 
       setTimeout(function () {
-        let currentStep = localStorage.getItem("progressStep") || "step1";
         let nextPage;
 
         switch (currentStep) {
@@ -26,14 +37,14 @@ window.addEventListener("load", function () {
             localStorage.setItem("progressStep", "step4");
             break;
           case "step4":
-            nextPage = "../index.html";
-            localStorage.removeItem("progressStep"); // Reset progress for future visits
+            nextPage = "../pages/fin.html";
+            localStorage.setItem("progressStep", "step5"); // Marcar como finalizado
             break;
           default:
             nextPage = "../index.html";
             break;
         }
-        
+
         window.location.href = nextPage;
       }, 1500);
     });
@@ -44,18 +55,18 @@ window.addEventListener("load", function () {
 document.addEventListener("DOMContentLoaded", () => {
   const siBtn = document.getElementById("SiBtn");
 
-if (siBtn) {
-  siBtn.addEventListener("click", (event) => {
-    event.preventDefault();
-    document.body.classList.add("fade-out");
+  if (siBtn) {
+    siBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      document.body.classList.add("fade-out");
 
-    setTimeout(() => {
-      // Ajuste la ruta para asegurarse de que apunta correctamente a la página fin.html
-      window.location.href = "../pages/fin.html";
-    }, 1500);
-  });
-}
-
+      setTimeout(() => {
+        // Redirigir a la página final
+        window.location.href = "../pages/fin.html";
+        localStorage.setItem("progressStep", "step5"); // Establecer el step final
+      }, 1500);
+    });
+  }
 
   const noBtn = document.getElementById("NoBtn");
   if (noBtn) {
