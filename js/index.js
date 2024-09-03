@@ -13,16 +13,19 @@ window.addEventListener("load", function () {
 
         switch (currentPage) {
           case "index.html":
-            nextPage = "/pages/paginaSorpresa.html";
+            nextPage = "pages/paginaSorpresa.html"; // Ruta relativa
             break;
           case "paginaSorpresa.html":
-            nextPage = "/pages/cartaDeAmor.html";
+            nextPage = "pages/cartaDeAmor.html"; // Ruta relativa
             break;
           case "cartaDeAmor.html":
-            nextPage = "/pages/serMiNovia.html";
+            nextPage = "pages/serMiNovia.html"; // Ruta relativa
+            break;
+          case "serMiNovia.html":
+            nextPage = "pages/fin.html"; // Ruta relativa
             break;
           default:
-            nextPage = "/index.html";
+            nextPage = "index.html"; // Ruta relativa
             break;
         }
 
@@ -42,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.add("fade-out");
 
       setTimeout(() => {
-        window.location.href = "/pages/fin.html";
+        window.location.href = "pages/fin.html"; // Ruta relativa
       }, 1500);
     });
   }
