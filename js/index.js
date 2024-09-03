@@ -12,7 +12,7 @@ window.addEventListener("load", function () {
         // Detecta la página actual y decide la siguiente página
         const currentPage = window.location.pathname.split("/").pop();
 
-        let nextPage = "";
+        let nextPage;
         switch (currentPage) {
           case "index.html":
             nextPage = "./pages/paginaSorpresa.html";
@@ -35,7 +35,7 @@ window.addEventListener("load", function () {
   }
 });
 
-// CAMBIO DE LUGAR DE BOTON NO Y REDIRECCION BOTON SI
+// CAMBIO DE LUGAR DEL BOTÓN NO Y REDIRECCIÓN DEL BOTÓN SÍ
 document.addEventListener("DOMContentLoaded", () => {
   const siBtn = document.getElementById("SiBtn");
 
