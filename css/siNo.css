@@ -10,13 +10,37 @@
 
 #SiBtn {
   left: 35%;  /* Posiciona el botón "Sí" en el centro horizontal del contenedor */
-  top: 80%; /* Ajusta la posición vertical si es necesario */
+  top: 90%; /* Ajusta la posición vertical si es necesario */
   transform: translate(-50%, -50%); /* Centra el botón respecto a su posición */
 }
 
 #NoBtn {
   left: 60%; /* Posiciona el botón "No" más a la derecha del contenedor */
-  top: 80%;  /* Ajusta la posición vertical si es necesario */
+  top: 90%;  /* Ajusta la posición vertical si es necesario */
   transform: translate(-50%, -50%); /* Centra el botón respecto a su posición inicial */
   transition: all 0.3s ease; /* Transición suave para el movimiento */
 }
+
+/* #NoBtn, #SiBtn {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  padding: 6px 20px;
+  margin: 0 10px;
+  box-sizing: border-box;
+  transition: none; 
+}
+
+#SiBtn {
+  left: 18vh;
+    /
+  transform: translateX(-50%);
+}
+
+#NoBtn {
+  / Se eliminan las posiciones iniciales para dejar que el JavaScript maneje esto 
+  right: 14vh;
+  
+  
+  transition: all 0.3s ease;
+} */
